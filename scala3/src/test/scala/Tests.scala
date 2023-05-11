@@ -60,4 +60,17 @@ class Tests extends AnyFlatSpec {
       assert(Solutions.gooseFilter(k) == v)
     })
   }
+  "A name" should "return if your playing banjo or not" in {
+    val testCases = List( // name, expected
+      ("Adam", "Adam does not play banjo"),
+      ("Paul", "Paul does not play banjo"),
+      ("Ringo", "Ringo plays banjo"),
+      ("bravo", "bravo does not play banjo"),
+      ("rolf", "rolf plays banjo")
+    )
+
+    testCases.foreach { case (k, v) =>
+      assert(Solutions.areYouPlayingBanjo(k) == v)
+    }
+  }
 }

@@ -65,4 +65,14 @@ object Solutions {
       List("African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher")
     birds.filter(b => !goose.contains(b))
   }
+
+  /** @param name
+    *   Name to enter
+    * @return
+    *   If person plays banjo
+    */
+  def areYouPlayingBanjo(name: String) = name.head match {
+    case 'R' | 'r' => name + " plays banjo"
+    case _         => name + " does not play banjo"
+  }
 }
