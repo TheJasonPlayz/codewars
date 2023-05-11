@@ -32,6 +32,11 @@ object Solutions {
       else positiveSum(arr.tail, acc)
   }
 
+  /** @param language
+    *   Langauge to be greeted from
+    * @return
+    *   Greeting from specified language
+    */
   def greet(language: String): String = {
     val languages = scala.collection.immutable.Map[String, String](
       "english" -> "Welcome",
@@ -53,5 +58,11 @@ object Solutions {
       "welsh" -> "Croeso"
     )
     languages.getOrElse(language, "Welcome")
+  }
+
+  def gooseFilter(birds: List[String]): List[String] = {
+    val goose =
+      List("African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher")
+    birds.filter(b => !goose.contains(b))
   }
 }

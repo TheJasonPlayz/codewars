@@ -33,4 +33,31 @@ class Tests extends AnyFlatSpec {
     )
     testCases.foreach({ case (k, v) => assert(Solutions.greet(k) == v) })
   }
+  "A list of birds" should "return any birds that are not geese" in {
+    val testCases = List[(List[String], List[String])](
+      (
+        List(
+          "Mallard",
+          "Hook Bill",
+          "African",
+          "Crested",
+          "Pilgrim",
+          "Toulouse",
+          "Blue Swedish"
+        ),
+        List("Mallard", "Hook Bill", "Crested", "Blue Swedish")
+      ),
+      (
+        List("Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"),
+        List("Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested")
+      ),
+      (
+        List("African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"),
+        List()
+      )
+    )
+    testCases.foreach({ case (k, v) =>
+      assert(Solutions.gooseFilter(k) == v)
+    })
+  }
 }
