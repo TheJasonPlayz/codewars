@@ -16,4 +16,19 @@ object Solutions {
     */
   def removeChars(s: String): String =
     s.substring(1, s.length - 1)
+
+  /** @param arr
+    *   Array to sum up
+    * @param acc
+    *   Accumulator cache
+    * @return
+    *   Sum of all positives in an array
+    */
+  def positiveSum(arr: Array[Int], acc: Int = 0): Int = arr.length match {
+    case 0 => 0
+    case 1 => if (arr.head > 0) acc + arr.head else acc
+    case _ =>
+      if (arr.head > 0) positiveSum(arr.tail, acc + arr.head)
+      else positiveSum(arr.tail, acc)
+  }
 }

@@ -20,4 +20,8 @@ class Tests extends AnyFlatSpec {
       )
     })
   }
+  "An array of integers" should "return the sum of all positives in array" in {
+    val test = Array(1, 2, 3, 4, 5, -1, -2, -3, -4, -5)
+    assert(Solutions.positiveSum(test) == 15)
+  }
 }
