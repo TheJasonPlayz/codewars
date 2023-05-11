@@ -60,6 +60,11 @@ object Solutions {
     languages.getOrElse(language, "Welcome")
   }
 
+  /** @param birds
+    *   Array of birds
+    * @return
+    *   Array without any geese
+    */
   def gooseFilter(birds: List[String]): List[String] = {
     val goose =
       List("African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher")
