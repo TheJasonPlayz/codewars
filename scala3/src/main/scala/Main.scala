@@ -31,4 +31,27 @@ object Solutions {
       if (arr.head > 0) positiveSum(arr.tail, acc + arr.head)
       else positiveSum(arr.tail, acc)
   }
+
+  def greet(language: String): String = {
+    val languages = scala.collection.immutable.Map[String, String](
+      "english" -> "Welcome",
+      "czech" -> "Vitejte",
+      "danish" -> "Velkomst",
+      "dutch" -> "Welkom",
+      "estonian" -> "Tere tulemast",
+      "finnish" -> "Tervetuloa",
+      "flemish" -> "Welgekomen",
+      "french" -> "Bienvenue",
+      "german" -> "Willkommen",
+      "irish" -> "Failte",
+      "italian" -> "Benvenuto",
+      "latvian" -> "Gaidits",
+      "lithuanian" -> "Laukiamas",
+      "polish" -> "Witamy",
+      "spanish" -> "Bienvenido",
+      "swedish" -> "Valkommen",
+      "welsh" -> "Croeso"
+    )
+    languages.getOrElse(language, "Welcome")
+  }
 }

@@ -24,4 +24,13 @@ class Tests extends AnyFlatSpec {
     val test = Array(1, 2, 3, 4, 5, -1, -2, -3, -4, -5)
     assert(Solutions.positiveSum(test) == 15)
   }
+  "A language" should "return it's greeting" in {
+    val testCases = List(
+      ("english", "Welcome"),
+      ("dutch", "Welkom"),
+      ("IP_ADDRESS_INVALID", "Welcome"),
+      ("", "Welcome")
+    )
+    testCases.foreach({ case (k, v) => assert(Solutions.greet(k) == v) })
+  }
 }
