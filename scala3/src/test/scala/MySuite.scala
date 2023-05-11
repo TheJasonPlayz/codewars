@@ -7,4 +7,17 @@ class Tests extends AnyFlatSpec {
     val (odd, even) = (Solutions.evenOrOdd(1), Solutions.evenOrOdd(2))
     assert(odd == "Odd" && even == "Even")
   }
+  "A string" should "return itself without first and last chars" in {
+    val tests = scala.collection.immutable.Map[String, String](
+      "eloquent" -> "loquen",
+      "country" -> "ountr",
+      "person" -> "erso",
+      "place" -> "lac"
+    )
+    tests.foreach({ case (k, v) =>
+      assert(
+        Solutions.removeChars(k) == v
+      )
+    })
+  }
 }
