@@ -1,4 +1,6 @@
 package com.solutions
+
+import scala.quoted.runtime.Patterns.patternType
 object Solutions {
 
   /** @param number
@@ -79,5 +81,20 @@ object Solutions {
   def areYouPlayingBanjo(name: String) = name.head match {
     case 'R' | 'r' => name + " plays banjo"
     case _         => name + " does not play banjo"
+  }
+
+  /** @param name
+    *   Name to abbreviate
+    * @return
+    *   first and last initials seperated by a dot
+    */
+  def abbrevName(name: String): String = {
+    import scala.util.matching.Regex
+    val pattern = "^(.).*\\s(.).*".r
+    name match {
+      case pattern(first, last) => {
+        s"${first.toUpperCase}.${last.toUpperCase()}"
+      }
+    }
   }
 }

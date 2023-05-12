@@ -73,4 +73,14 @@ class Tests extends AnyFlatSpec {
       assert(Solutions.areYouPlayingBanjo(k) == v)
     }
   }
+  "A name" should "return first and last intitials, seperated by a dot" in {
+    val testCases = List(
+      ("Sam Harris", "S.H"),
+      ("patrick feenan", "P.F"),
+      ("Evan C", "E.C"),
+      ("P Favuzzi", "P.F"),
+      ("David Mendieta", "D.M")
+    )
+    testCases.foreach({ case (k, v) => assert(Solutions.abbrevName(k) == v) })
+  }
 }
