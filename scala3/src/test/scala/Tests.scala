@@ -31,7 +31,9 @@ class Tests extends AnyFlatSpec {
       ("IP_ADDRESS_INVALID", "Welcome"),
       ("", "Welcome")
     )
-    testCases.foreach({ case (k, v) => assert(Solutions.greet(k) == v) })
+    testCases.foreach({ case (k, v) =>
+      assert(Solutions.greetLanguage(k) == v)
+    })
   }
   "A list of birds" should "return any birds that are not geese" in {
     val testCases = List[(List[String], List[String])](
@@ -82,5 +84,9 @@ class Tests extends AnyFlatSpec {
       ("David Mendieta", "D.M")
     )
     testCases.foreach({ case (k, v) => assert(Solutions.abbrevName(k) == v) })
+  }
+
+  "The function" should "Return 'Hello World'" in {
+    assert("hello world!" == Solutions.greetHelloWorld())
   }
 }

@@ -97,4 +97,14 @@ object Solutions {
       }
     }
   }
+
+  def greetHelloWorld(): String =
+    "hello world!".reverse
+      .toCharArray()
+      .reverse
+      .mkString
+      .reverse
+      .toCharArray()
+      .reverse
+      .mkString
 }
