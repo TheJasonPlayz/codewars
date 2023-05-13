@@ -39,7 +39,7 @@ object Solutions {
     * @return
     *   Greeting from specified language
     */
-  def greet(language: String): String = {
+  def greetLanguage(language: String): String = {
     val languages = scala.collection.immutable.Map[String, String](
       "english" -> "Welcome",
       "czech" -> "Vitejte",
