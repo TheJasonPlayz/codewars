@@ -107,4 +107,6 @@ object Solutions {
       .toCharArray()
       .reverse
       .mkString
+
+  def noSpace(s: String): String = s.filter(c => c != ' ')
 }
