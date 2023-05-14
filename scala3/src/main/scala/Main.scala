@@ -1,6 +1,5 @@
 package com.solutions
 
-import scala.quoted.runtime.Patterns.patternType
 object Solutions {
 
   /** @param number
