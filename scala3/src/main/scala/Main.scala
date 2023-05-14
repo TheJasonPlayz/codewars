@@ -107,5 +107,10 @@ object Solutions {
       .reverse
       .mkString
 
+  /** @param s
+    *   String to remove spaces from
+    * @return
+    *   String with spaces removed
+    */
   def noSpace(s: String): String = s.filter(c => c != ' ')
 }
