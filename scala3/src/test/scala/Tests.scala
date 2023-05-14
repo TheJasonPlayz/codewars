@@ -112,4 +112,20 @@ class Tests extends AnyFlatSpec {
     assert(Solutions.findSmallestInt(List(13, 7, 42)) == 7)
     assert(Solutions.findSmallestInt(List(78, 56, 232, 12, 8)) == 8)
   }
+
+  "Three points of a triangle" should "return the barycenter of the triangle" in {
+    val testCases = List[
+      ((Int, Int), (Int, Int), (Int, Int), (Double, Double))
+    ](
+      ((4, 6), (12, 4), (10, 10), (8.6667, 6.6667)),
+      ((4, 2), (12, 2), (6, 10), (7.3333, 4.6667)),
+      ((4, 8), (8, 2), (16, 6), (9.3333, 5.3333))
+    )
+
+    testCases.foreach {
+      case (pointA, pointB, pointC, expected) => {
+        assert(Solutions.barTriang(pointA, pointB, pointC) == expected)
+      }
+    }
+  }
 }

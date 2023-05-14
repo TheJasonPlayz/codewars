@@ -120,4 +120,22 @@ object Solutions {
     *   Smallest integer of the array
     */
   def findSmallestInt(nums: List[Int]): Int = nums.min
+
+  /** @param pointA
+    *   First point to find barycenter
+    * @param pointB
+    *   Second point to find barycenter
+    * @param pointC
+    *   Third point to find barycenter
+    * @return
+    *   Barycenter of a triangle represented by a list of doubles
+    */
+  def barTriang(
+      pointA: (Int, Int),
+      pointB: (Int, Int),
+      pointC: (Int, Int)
+  ): (Double, Double) = (
+    ((((pointA._1 + pointB._1 + pointC._1) / 3.0) * 10000).round / 10000.0),
+    ((((pointA._2 + pointB._2 + pointC._2) / 3.0) * 10000).round / 10000.0)
+  )
 }
