@@ -105,4 +105,11 @@ class Tests extends AnyFlatSpec {
     assert(Solutions.noSpace("jfBm  gk lf8hg  88lbe8 ") === "jfBmgklf8hg88lbe8")
     assert(Solutions.noSpace("8j aam") === "8jaam")
   }
+
+  "A list of integers" should "return the smallest integer" in {
+    assert(Solutions.findSmallestInt(List(-7, 42)) == -7)
+    assert(Solutions.findSmallestInt(List(42, -7)) == -7)
+    assert(Solutions.findSmallestInt(List(13, 7, 42)) == 7)
+    assert(Solutions.findSmallestInt(List(78, 56, 232, 12, 8)) == 8)
+  }
 }

@@ -113,4 +113,11 @@ object Solutions {
     *   String with spaces removed
     */
   def noSpace(s: String): String = s.filter(c => c != ' ')
+
+  /** @param nums
+    *   Array to find the smallest integer from
+    * @return
+    *   Smallest integer of the array
+    */
+  def findSmallestInt(nums: List[Int]): Int = nums.min
 }
