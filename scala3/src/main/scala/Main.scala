@@ -138,4 +138,16 @@ object Solutions {
     ((((pointA._1 + pointB._1 + pointC._1) / 3.0) * 10000).round / 10000.0),
     ((((pointA._2 + pointB._2 + pointC._2) / 3.0) * 10000).round / 10000.0)
   )
+
+  /** @param str
+    *   String to remove vowels from
+    * @return
+    *   String without vowels
+    */
+  def disemvowel(str: String): String = {
+    val v = scala.collection.immutable.List[Char](
+      'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'
+    )
+    str.filter(c => !v.contains(c))
+  }
 }

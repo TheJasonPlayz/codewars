@@ -128,4 +128,17 @@ class Tests extends AnyFlatSpec {
       }
     }
   }
+
+  "A string containing vowels" should "return a string without vowels" in {
+    assert(
+      Solutions.disemvowel(
+        "No offense but, Your writing is among the worst I've ever read"
+      ) == "N ffns bt, Yr wrtng s mng th wrst 'v vr rd"
+    )
+    assert(
+      Solutions.disemvowel(
+        "This website is for losers LOL!"
+      ) == "Ths wbst s fr lsrs LL!"
+    )
+  }
 }
