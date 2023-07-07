@@ -150,4 +150,11 @@ object Solutions {
     )
     str.filter(c => !v.contains(c))
   }
+
+  /** @param xs
+    *   List of integers to sum the squares of
+    * @return
+    *   The sum of each integers' square
+    */
+  def squareSum(xs: List[Int]): Int = xs.map(c => c * c).sum
 }

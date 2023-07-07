@@ -140,4 +140,9 @@ class Tests extends AnyFlatSpec {
       ) == "Ths wbst s fr lsrs LL!"
     )
   }
+  "A list of integers" should "return the sum of the integers' squares" in {
+    assert(Solutions.squareSum(List(1, 2)) === 5)
+    assert(Solutions.squareSum(List(0, 3, 4, 5)) === 50)
+    assert(Solutions.squareSum(List()) === 0)
+  }
 }
