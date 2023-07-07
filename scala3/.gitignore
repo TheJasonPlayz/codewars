@@ -26,6 +26,9 @@ local.sbt
 .metals/
 metals.sbt
 
+# VSCode
+.vscode/ 
+
 # IDEA
 .idea
 .idea_modules
