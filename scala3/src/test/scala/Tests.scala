@@ -168,4 +168,11 @@ class Tests extends AnyFlatSpec {
       assert(expected == Solutions.stringEndsWith(s, e))
     }
   }
+
+  "A string" should "return the integer form of the string" in {
+    assert(1234 == Solutions.stringToNumber("1234"))
+    assert(605 == Solutions.stringToNumber("605"))
+    assert(1405 == Solutions.stringToNumber("1405"))
+    assert(-7 == Solutions.stringToNumber("-7"))
+  }
 }

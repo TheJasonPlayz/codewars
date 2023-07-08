@@ -171,4 +171,11 @@ object Solutions {
     */
   def stringEndsWith(s: String, e: String): Boolean =
     if (s.slice(s.length - e.length, s.length) == e) true else false
+
+  /** @param s
+    *   String to turn into a number
+    * @return
+    *   turns @param s into a number
+    */
+  def stringToNumber(s: String): Int = s.toInt
 }
