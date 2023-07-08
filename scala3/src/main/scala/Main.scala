@@ -5,7 +5,7 @@ object Solutions {
   /** @param number
     *   Number to check if even or odd
     * @return
-    *   "Even" if number is even, else "Odd"
+    *   "Even" if @param number is even, else "Odd"
     */
   def evenOrOdd(number: Int): String =
     if (number % 2 == 0) "Even" else "Odd"
@@ -13,17 +13,18 @@ object Solutions {
   /** @param s
     *   String to manipulate
     * @return
-    *   String with first and last characters removed
+    * @param s
+    *   with first and last characters removed
     */
   def removeChars(s: String): String =
     s.substring(1, s.length - 1)
 
   /** @param arr
-    *   Array to sum up
+    *   Array to sum
     * @param acc
     *   Accumulator cache
     * @return
-    *   Sum of all positives in an array
+    *   Sum of all positives in @param arr
     */
   def positiveSum(arr: Array[Int], acc: Int = 0): Int = arr.length match {
     case 0 => 0
@@ -36,7 +37,7 @@ object Solutions {
   /** @param language
     *   Langauge to be greeted from
     * @return
-    *   Greeting from specified language
+    *   Greeting from @param language
     */
   def greetLanguage(language: String): String = {
     val languages = scala.collection.immutable.Map[String, String](
@@ -64,7 +65,8 @@ object Solutions {
   /** @param birds
     *   Array of birds
     * @return
-    *   Array without any geese
+    * @param birds
+    *   without any geese
     */
   def gooseFilter(birds: List[String]): List[String] = {
     val goose =
@@ -75,7 +77,7 @@ object Solutions {
   /** @param name
     *   Name to enter
     * @return
-    *   If person plays banjo
+    *   If person plays banjo, based on @param name
     */
   def areYouPlayingBanjo(name: String) = name.head match {
     case 'R' | 'r' => name + " plays banjo"
@@ -85,7 +87,7 @@ object Solutions {
   /** @param name
     *   Name to abbreviate
     * @return
-    *   first and last initials seperated by a dot
+    *   first and last initials of @param name seperated by a dot
     */
   def abbrevName(name: String): String = {
     import scala.util.matching.Regex
@@ -110,14 +112,15 @@ object Solutions {
   /** @param s
     *   String to remove spaces from
     * @return
-    *   String with spaces removed
+    * @param s
+    *   with spaces removed
     */
   def noSpace(s: String): String = s.filter(c => c != ' ')
 
   /** @param nums
     *   Array to find the smallest integer from
     * @return
-    *   Smallest integer of the array
+    *   Smallest integer of @param nums
     */
   def findSmallestInt(nums: List[Int]): Int = nums.min
 
@@ -128,7 +131,8 @@ object Solutions {
     * @param pointC
     *   Third point to find barycenter
     * @return
-    *   Barycenter of a triangle represented by a list of doubles
+    *   Barycenter of a triangle represented by a list of doubles made of @param
+    *   pointA, @param pointB, and @param pointC
     */
   def barTriang(
       pointA: (Int, Int),
@@ -154,7 +158,7 @@ object Solutions {
   /** @param xs
     *   List of integers to sum the squares of
     * @return
-    *   The sum of each integers' square
+    *   The sum of each integers' square in @param xs
     */
   def squareSum(xs: List[Int]): Int = xs.map(c => c * c).sum
 }
