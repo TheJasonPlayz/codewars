@@ -146,4 +146,26 @@ class Tests extends AnyFlatSpec {
     assert(Solutions.squareSum(List(0, 3, 4, 5)) === 50)
     assert(Solutions.squareSum(List()) === 0)
   }
+
+  "Two strings" should "return true if the first string ends in the second, and false if not" in {
+    val testCases = Seq(
+      ("samurai", "ai", true),
+      ("ninja", "ja", true),
+      ("sensei", "i", true),
+      ("abc", "abc", true),
+      ("abcabc", "bc", true),
+      ("fails", "ails", true),
+      ("test", "", true),
+      ("sumo", "omo", false),
+      ("samurai", "ra", false),
+      ("abc", "abcd", false),
+      ("ails", "fails", false),
+      ("this", "fails", false),
+      ("spam", "eggs", false)
+    )
+
+    testCases.foreach { case (s, e, expected) =>
+      assert(expected == Solutions.stringEndsWith(s, e))
+    }
+  }
 }

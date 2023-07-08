@@ -161,4 +161,14 @@ object Solutions {
     *   The sum of each integers' square in @param xs
     */
   def squareSum(xs: List[Int]): Int = xs.map(c => c * c).sum
+
+  /** @param s
+    *   String to check for the end of @param e
+    * @param e
+    *   String to check if it is in the end of @param s
+    * @return
+    *   True if @param s ends with @param e, false if not
+    */
+  def stringEndsWith(s: String, e: String): Boolean =
+    if (s.slice(s.length - e.length, s.length) == e) true else false
 }
