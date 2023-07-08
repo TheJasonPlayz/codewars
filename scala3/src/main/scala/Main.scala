@@ -178,4 +178,14 @@ object Solutions {
     *   turns @param s into a number
     */
   def stringToNumber(s: String): Int = s.toInt
+
+  /** @param s
+    *   A string representing printer colors with letters a - m
+    * @return
+    *   Error rate of the printer as a string fraction whose numerator is the
+    *   number of errors (letters not in the range of a - m) and the denominator
+    *   is the length of @param s
+    */
+  def printerError(s: String): String =
+    s"${s.filterNot(c => ('a' to 'm').contains(c)).length}/${s.length}"
 }

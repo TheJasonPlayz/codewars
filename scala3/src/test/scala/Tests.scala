@@ -175,4 +175,12 @@ class Tests extends AnyFlatSpec {
     assert(1405 == Solutions.stringToNumber("1405"))
     assert(-7 == Solutions.stringToNumber("-7"))
   }
+
+  "A string of letters representing printer colors" should "only contain letters from a to m" in {
+    assert(
+      "3/56" == Solutions.printerError(
+        "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"
+      )
+    )
+  }
 }
